@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/10 10:40:05 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:47:45 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,16 @@ void	stack_add_back(t_stack **lst, t_stack *new);
 int		is_sorted(t_stack *stack);
 void	free_stack(t_stack **stack);
 // -----------------MOVES--------------------//
-void	push_a(t_stack **src, t_stack **dest);
-void	swap_a(t_stack **stack);
+void	push(t_stack **src, t_stack **dest);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_a, t_stack **stack_b);
+void	swap(t_stack **stack);
+void	sa(t_stack **stack_a);
+void	sb(t_stack **stack_b);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	rotate(t_stack **stack);
+void	ra(t_stack **stack_a);
+void	rb(t_stack **stack_b);
+void	rr(t_stack **stack_a, t_stack **stack_b);
 
 #endif

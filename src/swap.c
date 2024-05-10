@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves_a.c                                          :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 12:11:46 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/10 10:09:29 by jceron-g         ###   ########.fr       */
+/*   Created: 2024/05/10 11:36:19 by jceron-g          #+#    #+#             */
+/*   Updated: 2024/05/10 11:38:49 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	push_a(t_stack **src, t_stack **dest)
-{
-	t_stack	*aux;
-
-	if (*src != NULL && dest != NULL)
-	{
-		aux = (*src)->next;
-		(*src)->next = *dest;
-		*dest = *src;
-		*src = aux;
-		ft_putstr_fd("pa", 1);
-	}
-}
-
-void	swap_a(t_stack **stack)
+void	swap(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
@@ -40,6 +26,24 @@ void	swap_a(t_stack **stack)
 		second->next = first;
 		first->next = third;
 		*stack = second;
-		ft_putstr_fd("sa", 1);
 	}
+}
+
+void	sa(t_stack **stack_a)
+{
+	swap(stack_a);
+	ft_putstr_fd("sa\n", 1);
+}
+
+void	sb(t_stack **stack_b)
+{
+	swap(stack_b);
+	ft_putstr_fd("sb\n", 1);
+}
+
+void	ss(t_stack **stack_a, t_stack **stack_b)
+{
+	swap(stack_a);
+	swap(stack_b);
+	ft_putstr_fd("ss\n", 1);
 }
