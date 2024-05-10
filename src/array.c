@@ -6,12 +6,18 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/10 10:05:06 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:04:48 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+/*
+	Esto deberia ser un int puntero porque queremos que nos devuelva
+	el array de int para poder trabajar con ellas y el stack.
+*/
 
+int	*make 
+/*
 void	make_array(char **str)
 {
 	char	**new_matrix;
@@ -36,3 +42,4 @@ void	make_array(char **str)
 	free_matrix(new_matrix);
 	free(number);
 }
+*/
