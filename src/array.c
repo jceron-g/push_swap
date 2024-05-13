@@ -6,35 +6,12 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/13 13:12:22 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:44:51 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-/*
-	Esto deberia ser un int puntero porque queremos que nos devuelva
-	el array de int para poder trabajar con ellas y el stack.
-*/
-/*
-t_stack	**make_stack(char **str)
-{
-	int		i;
-	int		j;
-	char	*aux;
-	t_stack	**stack;
 
-	i = 0;
-	j = 0;
-	aux = ft_split(str[1], ' ');
-	while (str[i])
-		i++;
-	(*stack)->size = i;
-	while ((*stack)->next != NULL)
-	{
-		
-	}
-}
-*/
 void	set_stack_up(char **str)
 {
 	char	**new_matrix;
@@ -55,7 +32,10 @@ void	set_stack_up(char **str)
 	while (new_matrix[i])
 		number[j++] = ft_atol(new_matrix[i++]);
 	if (check_dup(number, len) == 0)
+	{
 		free_matrix(new_matrix);
+		print_error();
+	}
 	create_stack(number, len);
 	free_matrix(new_matrix);
 }
@@ -65,6 +45,7 @@ void	create_stack(int *array, int len)
 	t_stack	*stack;
 
 	stack = make_stack(array, len);
+	ra(&stack);
 	print_stack(stack);
 	free_stack(&stack);
 	free(array);
