@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/13 12:58:15 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:10:17 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	make_array(char **str)
 		return ;
 	while (new_matrix[i])
 		number[j++] = ft_atol(new_matrix[i++]);
-	check_dup(number, len);
+	if (check_dup(number, len) == 0)
+		free_matrix(new_matrix);
 	create_stack(number, len);
 	free_matrix(new_matrix);
 }
