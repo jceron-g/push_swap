@@ -74,7 +74,7 @@ void	*ft_calloc_gnl(size_t count, size_t size)
 	i = 0;
 	len = size * count;
 	ptr = malloc(len);
-	if (ptr == NULL || ptr < 0)
+	if (ptr == NULL)
 		return (NULL);
 	while (i < len)
 	{
