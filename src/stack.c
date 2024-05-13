@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 13:23:27 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/10 12:43:15 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/13 11:13:11 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ t_stack	*make_stack(int *numbers, int len)
 	i = 0;
 	stack_a = new_stack(numbers[i]);
 	i++;
-	while (i <= len)
-		stack_add_back(&stack_a, new_stack(numbers[i++]));
+	while (i < len)
+	{
+		stack_add_back(&stack_a, new_stack(numbers[i]));
+		i++;
+	}
 	return (stack_a);
 }

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/10 13:04:48 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:58:15 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,26 @@
 	Esto deberia ser un int puntero porque queremos que nos devuelva
 	el array de int para poder trabajar con ellas y el stack.
 */
-
-int	*make 
 /*
+t_stack	**make_stack(char **str)
+{
+	int		i;
+	int		j;
+	char	*aux;
+	t_stack	**stack;
+
+	i = 0;
+	j = 0;
+	aux = ft_split(str[1], ' ');
+	while (str[i])
+		i++;
+	(*stack)->size = i;
+	while ((*stack)->next != NULL)
+	{
+		
+	}
+}
+*/
 void	make_array(char **str)
 {
 	char	**new_matrix;
@@ -38,8 +55,16 @@ void	make_array(char **str)
 	while (new_matrix[i])
 		number[j++] = ft_atol(new_matrix[i++]);
 	check_dup(number, len);
-	make_stack(number, len);
+	create_stack(number, len);
 	free_matrix(new_matrix);
-	free(number);
 }
-*/
+
+void	create_stack(int *array, int len)
+{
+	t_stack	*stack;
+
+	stack = make_stack(array, len);
+	print_stack(stack);
+	free_stack(&stack);
+	free(array);
+}
