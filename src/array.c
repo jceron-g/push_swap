@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/13 13:10:17 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:12:22 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_stack	**make_stack(char **str)
 	}
 }
 */
-void	make_array(char **str)
+void	set_stack_up(char **str)
 {
 	char	**new_matrix;
 	int		*number;

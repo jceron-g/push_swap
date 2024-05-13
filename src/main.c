@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:31:52 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/13 12:50:08 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:15:16 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 	{
 		if (ft_strlen(argv[1]) == 0)
 			print_error();
-		make_array(argv);
+		set_stack_up(argv);
 	}
 	else
 		print_error();
