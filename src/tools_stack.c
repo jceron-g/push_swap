@@ -64,3 +64,21 @@ int	is_sorted(t_stack *stack)
 	}
 	return (1);
 }
+
+int	stack_size(t_stack *stack)
+{
+	int	i;
+	t_stack	*aux;
+
+	aux = stack;
+	i = 0;
+	if (!aux)
+		return (0);
+	while (aux->next)
+	{
+		aux = aux->next;
+		i++;
+	}
+	i++;
+	return (i);
+}

@@ -24,7 +24,6 @@ typedef struct s_stack
 	int				cost_a;
 	int				cost_b;
 	int				pos;
-	int				size;
 }					t_stack;
 
 // ---------------CHECK ERRORS----------------//
@@ -43,6 +42,7 @@ void	stack_add_back(t_stack **lst, t_stack *new);
 int		is_sorted(t_stack *stack);
 void	free_stack(t_stack **lst);
 void	create_stack(int *array, int len);
+int		stack_size(t_stack *stack);
 // -----------------MOVES--------------------//
 void	push(t_stack **src, t_stack **dest);
 void	pa(t_stack **stack_a, t_stack **stack_b);
