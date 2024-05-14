@@ -27,3 +27,31 @@ t_stack	*make_stack(int *numbers, int len)
 	}
 	return (stack_a);
 }
+
+void	assign_index(t_stack *stack)
+{
+	t_stack	*aux;
+	t_stack	*min_value;
+	int		index;
+
+	aux = stack;
+	index = 1;
+	while (aux)
+	{
+		while (aux && aux->index != -1)
+			aux = aux->next;
+		if (!aux)
+			return ;
+		min_value = aux;
+		while (aux)
+		{
+			if (aux->data < min_value->data && aux->index == -1)
+				min_value = aux;
+			aux = aux->next;
+		}
+		min_value->index = index;
+		index++;
+		aux = stack;
+	}
+}
+

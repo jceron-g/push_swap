@@ -42,12 +42,15 @@ void	set_stack_up(char **str)
 
 void	create_stack(int *array, int len)
 {
-	t_stack	*stack;
+	t_stack	*stack_a;
+	t_stack	*stack_b = NULL;
 
-	stack = make_stack(array, len);
-	assign_index(stack);
-	sort_three(&stack);
-	print_stack(stack);
-	free_stack(&stack);
+	stack_a = make_stack(array, len);
+	//assign_index(stack_a);
+	send_b(&stack_a, &stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
+	free_stack(&stack_a);
+	free_stack(&stack_b);
 	free(array);
 }

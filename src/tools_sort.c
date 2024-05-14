@@ -12,29 +12,20 @@
 
 #include "../push_swap.h"
 
-void	assign_index(t_stack *stack)
+void send_b(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*aux;
-	t_stack	*min_value;
-	int		index;
+	int total_elements;
+	int middle_index;
 
-	aux = stack;
-	index = 1;
-	while (aux)
+	assign_index(*stack_a);
+	total_elements = stack_size(*stack_a);
+	middle_index = total_elements / 2;
+	while (stack_size(*stack_a) > 3) 
 	{
-		while (aux && aux->index != -1)
-			aux = aux->next;
-		if (!aux)
-			return ;
-		min_value = aux;
-		while (aux)
-		{
-			if (aux->data < min_value ->data && aux->index == -1)
-				min_value = aux;
-			aux = aux->next;
-		}
-		min_value->index = index;
-		index++;
-		aux = stack;
+		if ((*stack_a)->index <= middle_index) 
+			pb(stack_a, stack_b);
+		else
+			ra(stack_a);
 	}
+	sort_three(stack_a);
 }

@@ -63,4 +63,5 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 // --------------ALGORITHM-------------------//
 void	assign_index(t_stack *stack);
 void	sort_three(t_stack **stack);
+void 	send_b(t_stack **stack_a, t_stack **stack_b);
 #endif
