@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/14 10:27:54 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/14 11:54:57 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	create_stack(int *array, int len)
 	t_stack	*stack;
 
 	stack = make_stack(array, len);
+	assign_index(stack);
 	sort_three(&stack);
 	print_stack(stack);
 	free_stack(&stack);

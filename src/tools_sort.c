@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   tools_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 11:31:52 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/14 11:53:31 by jceron-g         ###   ########.fr       */
+/*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
+/*   Updated: 2024/05/14 11:43:35 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	leak(void)
+void	assign_index(t_stack *stack)
 {
-	system("leaks -q push_swap");
-}
+	t_stack	*aux;
+	t_stack	*min_value;
+	int		index;
 
-void	print_stack(t_stack *stack)
-{
-	while (stack)
+	aux = stack;
+	index = 1;
+	while (aux)
 	{
-		printf("Value: %d\t Index: %d\n", stack->data, stack->index);
-		stack = stack->next;
+		while (aux && aux->index != -1)
+			aux = aux->next;
+		if (!aux)
+			return ;
+		min_value = aux;
+		while (aux)
+		{
+			if (aux->data < min_value ->data && aux->index == -1)
+				min_value = aux;
+			aux = aux->next;
+		}
+		min_value->index = index;
+		index++;
+		aux = stack;
 	}
-}
-
-int	main(int argc, char **argv)
-{
-	//t_stack	*stack;
-	//atexit(leak);
-	if (argc == 2)
-	{
-		if (ft_strlen(argv[1]) == 0)
-			print_error();
-		set_stack_up(argv);
-	}
-	else
-		print_error();
 }
