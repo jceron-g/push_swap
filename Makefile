@@ -6,7 +6,7 @@
 #    By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:34:28 by jceron-g          #+#    #+#              #
-#    Updated: 2024/05/13 13:41:18 by jceron-g         ###   ########.fr        #
+#    Updated: 2024/05/14 10:24:58 by jceron-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ BLUE      = \033[34;1m
 CYAN      = \033[37;1m
 RED		  = \033[31;1m
 
-SRC_FILES = array free main push reverse_rot rotate stack swap tools_stack tools
+SRC_FILES = array free main push reverse_rot rotate sort stack swap tools_stack tools
 SRC_FILES_BONUS = 
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
@@ -49,7 +49,7 @@ $(NAME):	$(OBJ)
 			@echo "$(GREEN)Compilation successful!$(RESET)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
-			@echo "$(BLUE)Compiling, please wait.: $(RESET)$(addsuffix .c, $(SRC_FILES))"
+			@echo "$(BLUE)Compiling, please wait.: $(RESET) $(notdir $<)"
 			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJF):

@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 11:31:52 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/14 10:32:50 by jceron-g         ###   ########.fr       */
+/*   Created: 2024/05/14 09:39:29 by jceron-g          #+#    #+#             */
+/*   Updated: 2024/05/14 10:28:23 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	leak(void)
+void	sort_three(t_stack **stack)
 {
-	system("leaks -q push_swap");
-}
+	t_stack	**aux;
 
-void	print_stack(t_stack *stack)
-{
-	
-	while (stack)
+	aux = stack;
+	while (is_sorted(*aux) == 0)
 	{
-		printf("%d\n", stack->data);
-		stack = stack->next;
+		if (is_sorted(*aux) == 1)
+			return ;
+		if ((*aux)->data > (*aux)->next->data
+			&& (*aux)->data > (*aux)->next->next->data)
+			ra(aux);
+		else if ((*aux)->next->data > (*aux)->data
+			&& (*aux)->next->data > (*aux)->next->next->data)
+			rra(aux);
+		if ((*aux)->data > (*aux)->next->data)
+			sa(aux);
 	}
-}
-
-int	main(int argc, char **argv)
-{
-	//t_stack	*stack;
-	//atexit(leak);
-	if (argc == 2)
-	{
-		if (ft_strlen(argv[1]) == 0)
-			print_error();
-		set_stack_up(argv);
-	}
-	else
-		print_error();
 }

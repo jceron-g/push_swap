@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:50 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/10 09:43:49 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/14 10:48:58 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_stack	*new_stack(int number)
 	if (!new_node)
 		return (NULL);
 	new_node->data = number;
+	new_node->index = -1;
 	new_node->next = NULL;
 	return (new_node);
 }
@@ -67,7 +68,7 @@ int	is_sorted(t_stack *stack)
 
 int	stack_size(t_stack *stack)
 {
-	int	i;
+	int		i;
 	t_stack	*aux;
 
 	aux = stack;
