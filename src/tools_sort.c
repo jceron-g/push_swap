@@ -6,36 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/15 15:48:16 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:32:40 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void	send_b(t_stack **stack_a, t_stack **stack_b)
-{
-	int	total_elements;
-	int	middle_index;
-	int	i;
-	
-	i = 0;
-	assign_index(*stack_a);
-	total_elements = stack_size(*stack_a);
-	middle_index = total_elements / 2;
-	while (stack_size(*stack_a) > 3 && i < middle_index)
-	{
-		if ((*stack_a)->index <= middle_index)
-		{
-			pb(stack_a, stack_b);
-			i++;
-		}
-		else
-			ra(stack_a);
-	}
-	while (stack_size(*stack_a) > 3)
-		pb(stack_a, stack_b);
-	sort_three(stack_a);
-}
 
 void	assign_index(t_stack *stack)
 {
@@ -76,5 +51,35 @@ void	assign_pos(t_stack *stack)
 		aux->pos = position;
 		aux = aux->next;
 		position++;
+	}
+}
+
+void	find_smallest(t_stack **stack)
+{
+	t_stack	*aux;
+	t_stack	*smallest;
+	int		position;
+
+	aux = *stack;
+	smallest = *stack;
+	position = 0;
+	while (aux)
+	{
+		if (smallest->index > aux->index)
+		{
+			position = aux->pos;
+			smallest = aux;
+		}
+		aux = aux->next;
+	}
+	return (position);
+}
+
+void	assign_target_pos(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*aux;
+	t_stack *node;
+	while (stack_b != NULL)
+	{	
 	}
 }

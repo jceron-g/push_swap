@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 13:23:27 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/15 15:27:05 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:16:32 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,29 @@ t_stack	*make_stack(int *numbers, int len)
 		i++;
 	}
 	return (stack_a);
+}
+
+void	send_b(t_stack **stack_a, t_stack **stack_b)
+{
+	int	total_elements;
+	int	middle_index;
+	int	i;
+
+	i = 0;
+	assign_index(*stack_a);
+	total_elements = stack_size(*stack_a);
+	middle_index = total_elements / 2;
+	while (stack_size(*stack_a) > 3 && i < middle_index)
+	{
+		if ((*stack_a)->index <= middle_index)
+		{
+			pb(stack_a, stack_b);
+			i++;
+		}
+		else
+			ra(stack_a);
+	}
+	while (stack_size(*stack_a) > 3)
+		pb(stack_a, stack_b);
+	sort_three(stack_a);
 }
