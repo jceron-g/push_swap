@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 13:23:27 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/15 09:35:43 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:27:05 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,31 +27,3 @@ t_stack	*make_stack(int *numbers, int len)
 	}
 	return (stack_a);
 }
-
-void	assign_index(t_stack *stack)
-{
-	t_stack	*aux;
-	t_stack	*min_value;
-	int		index;
-
-	aux = stack;
-	index = 1;
-	while (aux)
-	{
-		while (aux && aux->index != -1)
-			aux = aux->next;
-		if (!aux)
-			return ;
-		min_value = aux;
-		while (aux)
-		{
-			if (aux->data < min_value->data && aux->index == -1)
-				min_value = aux;
-			aux = aux->next;
-		}
-		min_value->index = index;
-		index++;
-		aux = stack;
-	}
-}
-
