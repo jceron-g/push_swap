@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/15 16:37:10 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:15:32 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		is_sorted(t_stack *stack);
 void	free_stack(t_stack **lst);
 void	create_stack(int *array, int len);
 int		stack_size(t_stack *stack);
-void	print_stack(t_stack *stack);
+void	print_stack(t_stack *stack, char *str);
 // -----------------MOVES--------------------//
 void	push(t_stack **src, t_stack **dest);
 void	pa(t_stack **stack_a, t_stack **stack_b);
@@ -63,6 +63,8 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 // --------------ALGORITHM-------------------//
 void	assign_index(t_stack *stack);
 void	assign_pos(t_stack *stack);
+void	assign_target_pos(t_stack **stack_a, t_stack **stack_b);
 void	sort_three(t_stack **stack);
-void 	send_b(t_stack **stack_a, t_stack **stack_b);
+void	send_b(t_stack **stack_a, t_stack **stack_b);
+int		find_smallest(t_stack **stack);
 #endif

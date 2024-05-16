@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/15 17:32:40 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/16 11:59:39 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	assign_pos(t_stack *stack)
 	}
 }
 
-void	find_smallest(t_stack **stack)
+int	find_smallest(t_stack **stack)
 {
 	t_stack	*aux;
 	t_stack	*smallest;
@@ -77,9 +77,26 @@ void	find_smallest(t_stack **stack)
 
 void	assign_target_pos(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*aux;
-	t_stack *node;
-	while (stack_b != NULL)
-	{	
+	t_stack	*b;
+	t_stack	*a;
+	t_stack	*closest;
+
+	b = *stack_b;
+	while (b)
+	{
+		a = *stack_a;
+		closest = NULL;
+		while (a)
+		{
+			if (b->data < a->data
+				&& (closest == NULL || closest->data > a->data))
+				closest = a;
+			a = a->next;
+		}
+		if (closest == NULL)
+			b->target_pos = find_smallest(stack_a);
+		else
+			b->target_pos = closest->pos;
+		b = b->next;
 	}
 }
