@@ -6,7 +6,7 @@
 #    By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:34:28 by jceron-g          #+#    #+#              #
-#    Updated: 2024/05/14 11:31:00 by jceron-g         ###   ########.fr        #
+#    Updated: 2024/05/16 13:57:12 by jceron-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ BLUE      = \033[34;1m
 CYAN      = \033[37;1m
 RED		  = \033[31;1m
 
-SRC_FILES = array free main push reverse_rot rotate sort stack swap tools_sort tools_stack tools
+SRC_FILES = array free main push reverse_rot rotate sort stack swap tools_sort tools_stack tools cost
 SRC_FILES_BONUS = 
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))

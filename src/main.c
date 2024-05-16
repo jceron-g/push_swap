@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:31:52 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/16 12:28:41 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/16 13:55:48 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	print_stack(t_stack *stack, char *str)
 	printf("-------Stack %s\n", str);
 	while (stack)
 	{
-		printf("Value: %d\t Index: %d\t Position: %d\t Target Position: %d\n", stack->data, stack->index, stack->pos, stack->target_pos);
+		printf("Value: %d\t Index: %d\t Position: %d\t Target Position: %d\t Cost B: %d\n", stack->data, stack->index, stack->pos, stack->target_pos, stack->cost_b);
 		stack = stack->next;
 	}
 }
