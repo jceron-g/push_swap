@@ -68,6 +68,6 @@ void	sort_three(t_stack **stack);
 void	send_b(t_stack **stack_a, t_stack **stack_b);
 int		find_smallest(t_stack **stack);
 //-------------------COSTS------------------------//
-void	set_costs(t_stack **stack);
+void	set_costs(t_stack **stack_b);
 
 #endif

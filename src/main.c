@@ -30,7 +30,7 @@ void	print_stack(t_stack *stack, char *str)
 int	main(int argc, char **argv)
 {
 	//t_stack	*stack;
-	atexit(leak);
+	//atexit(leak);
 	if (argc == 2)
 	{
 		if (ft_strlen(argv[1]) == 0)
