@@ -24,6 +24,28 @@ void	check_limits(long number)
 		print_error();
 }
 
+int	ft_abs(int a, int b)
+{
+	int	len;
+
+	len = 0;
+	if (a == 0 && b == 0)
+		return (0);
+	if (a < 0)
+	{
+		len = a * -1;
+	}
+	else
+		len = a;
+	if (b < 0)
+	{
+		len = len + (b * -1);
+	}
+	else
+		len = len + b;
+	return (len);
+}
+
 int	check_dup(int *numbers, int len)
 {
 	int	i;

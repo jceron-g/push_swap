@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jceron-g < jceron-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/16 13:57:04 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/20 13:16:49 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		check_dup(int *numbers, int len);
 void	set_stack_up(char **str);
 long	ft_atol(char *str);
 void	free_matrix(char **matrix);
+int		ft_abs(int a, int b);
 // -----------------STACK--------------------//
 t_stack	*make_stack(int *numbers, int len);
 t_stack	*new_stack(int content);
@@ -68,6 +69,7 @@ void	sort_three(t_stack **stack);
 void	send_b(t_stack **stack_a, t_stack **stack_b);
 int		find_smallest(t_stack **stack);
 //-------------------COSTS------------------------//
-void	set_costs(t_stack **stack_b);
+void	set_costs(t_stack **stack_a, t_stack **stack_b);
+void	cheapest_move(t_stack **stack_a, t_stack **stack_b);
 
 #endif
