@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cost.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceron-g < jceron-g@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 12:58:46 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/20 13:16:00 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:17:54 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ void	cheapest_move(t_stack **stack_a, t_stack **stack_b)
 		}
 		aux = aux->next;
 	}
-	ft_make_movs(stack_a, stack_b, low_cost_stack);
+	...
 }
