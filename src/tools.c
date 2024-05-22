@@ -6,17 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/14 10:37:42 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:47:49 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void	print_error(void)
-{
-	ft_putstr_fd("Error\n", 2);
-	exit(EXIT_FAILURE);
-}
 
 void	check_limits(long number)
 {
@@ -24,26 +18,11 @@ void	check_limits(long number)
 		print_error();
 }
 
-int	ft_abs(int a, int b)
+int	put_abs(int number)
 {
-	int	len;
-
-	len = 0;
-	if (a == 0 && b == 0)
-		return (0);
-	if (a < 0)
-	{
-		len = a * -1;
-	}
-	else
-		len = a;
-	if (b < 0)
-	{
-		len = len + (b * -1);
-	}
-	else
-		len = len + b;
-	return (len);
+	if (number < 0)
+		number = number * -1;
+	return (number);
 }
 
 int	check_dup(int *numbers, int len)

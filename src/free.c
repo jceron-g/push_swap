@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 14:32:13 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/13 13:44:26 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:48:04 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,10 @@ void	free_stack(t_stack **lst)
 		free(*lst);
 		*lst = aux_lst;
 	}
+}
+
+void	print_error(void)
+{
+	ft_putstr_fd("Error\n", 2);
+	exit(EXIT_FAILURE);
 }
