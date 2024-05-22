@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/22 15:47:49 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/22 16:06:11 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,22 @@ int	put_abs(int number)
 	if (number < 0)
 		number = number * -1;
 	return (number);
+}
+
+int	total_cost(int a, int b)
+{
+	int	total_cost;
+
+	if ((a > 0 && b > 0) || (a < 0 && b < 0))
+	{
+		if (a > b)
+			total_cost = put_abs(a);
+		else
+			total_cost = put_abs(b);
+	}
+	else
+		total_cost = put_abs(a) + put_abs(b);
+	return (total_cost);
 }
 
 int	check_dup(int *numbers, int len)
