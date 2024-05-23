@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/22 15:49:01 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:32:22 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void	create_stack(int *array, int len)
 	assign_pos(stack_b);
 	assign_target_pos(&stack_a, &stack_b);
 	set_costs(&stack_a, &stack_b);
+	put_total_cost(&stack_b);
+	smallest_cost(&stack_b);
 	print_stack(stack_a, "A");
 	print_stack(stack_b, "B");
 	free_stack(&stack_a);
