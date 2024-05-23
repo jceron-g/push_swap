@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 10:17:31 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:35:48 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,12 @@ int		put_abs(int number);
 int		total_cost(int a, int b);
 void	put_total_cost(t_stack **stack);
 t_stack	*smallest_cost(t_stack **stack);
+//-------------------MOVE_COSTS------------------------//
+void	move_ra(t_stack **stack, int cost_a);
+void	move_rb(t_stack **stack, int cost_b);
+void	move_rra(t_stack **stack, int cost_a);
+void	move_rrb(t_stack **stack, int cost_b);
+void	move_rr(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
+void	move_rrr(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
 
 #endif
