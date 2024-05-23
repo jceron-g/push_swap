@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 17:03:33 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 17:12:27 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void	set_costs(t_stack **stack_a, t_stack **stack_b);
 int		total_cost(int a, int b);
 void	put_total_cost(t_stack **stack);
 void	smallest_cost(t_stack **stack_a, t_stack **stack_b);
+int		low_to_top(t_stack **stack_a);
 //-------------------MOVE_COSTS------------------------//
 void	move_ra(t_stack **stack, int *cost_a);
 void	move_rb(t_stack **stack, int *cost_b);

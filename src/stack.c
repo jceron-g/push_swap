@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 13:23:27 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 14:51:50 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:22:42 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,4 @@ void	send_b(t_stack **stack_a, t_stack **stack_b)
 		pb(stack_a, stack_b);
 	sort_three(stack_a);
 	sort_and_init(stack_a, stack_b);
-	smallest_cost(stack_a, stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:31:52 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 14:42:59 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:32:02 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,15 @@ void	print_stack(t_stack *stack, char *str)
 
 int	main(int argc, char **argv)
 {
-	atexit(leak);
+	//atexit(leak);
 	if (argc == 2)
 	{
 		if (ft_strlen(argv[1]) == 0)
 			print_error();
 		set_stack_up(argv);
 	}
+	else if (argc == 1)
+		return (0);
 	else
 		print_error();
 }

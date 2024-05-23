@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 15:28:53 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:34:49 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,10 @@ void	assign_target_pos(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_and_init(t_stack **stack_a, t_stack **stack_b)
 {
+	int	check;
+	int i;
+
+	i = 0;
 	while (*stack_b)
 	{
 		assign_pos(*stack_a);
@@ -112,4 +116,26 @@ void	sort_and_init(t_stack **stack_a, t_stack **stack_b)
 		put_total_cost(stack_b);
 		smallest_cost(stack_a, stack_b);
 	}
+	assign_pos(*stack_a);
+	check = find_smallest(stack_a);
+	//printf("%d\n", check);
+	if (check <= stack_size(*stack_a) / 2)
+	{
+		while (i < check)
+		{
+			ra(stack_a);
+			i++;
+		}
+	}	
+	else
+	{
+		i = check;
+		while (i < stack_size(*stack_a))
+		{
+			rra(stack_a);
+			i++;
+		}
+	}
+	print_stack(*stack_a, "A");
 }
+
