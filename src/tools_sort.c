@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/16 12:49:09 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:32:31 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,22 @@ void	assign_target_pos(t_stack **stack_a, t_stack **stack_b)
 		else
 			b->target_pos = closest->pos;
 		b = b->next;
+	}
+}
+
+void	sort_and_init(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*aux;
+
+	aux = *stack_b;
+	while (aux)
+	{
+		assign_pos(*stack_a);
+		assign_pos(*stack_b);
+		assign_target_pos(stack_a, stack_b);
+		set_costs(stack_a, stack_b);
+		put_total_cost(stack_b);
+		smallest_cost(stack_b);
+		aux = aux->next;
 	}
 }

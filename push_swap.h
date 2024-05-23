@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 11:35:48 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:19:39 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	assign_target_pos(t_stack **stack_a, t_stack **stack_b);
 void	sort_three(t_stack **stack);
 void	send_b(t_stack **stack_a, t_stack **stack_b);
 int		find_smallest(t_stack **stack);
+void	sort_and_init(t_stack **stack_a, t_stack **stack_b);
 //-------------------COSTS------------------------//
 void	set_costs(t_stack **stack_a, t_stack **stack_b);
 int		put_abs(int number);
