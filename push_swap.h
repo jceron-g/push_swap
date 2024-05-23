@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 12:19:39 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:32:58 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void	sort_three(t_stack **stack);
 void	send_b(t_stack **stack_a, t_stack **stack_b);
 int		find_smallest(t_stack **stack);
 void	sort_and_init(t_stack **stack_a, t_stack **stack_b);
+void	loop_moves(t_stack **stack_a, t_stack **stack_b, t_stack *lowest_cost);
 //-------------------COSTS------------------------//
 void	set_costs(t_stack **stack_a, t_stack **stack_b);
 int		put_abs(int number);
@@ -77,11 +78,11 @@ int		total_cost(int a, int b);
 void	put_total_cost(t_stack **stack);
 t_stack	*smallest_cost(t_stack **stack);
 //-------------------MOVE_COSTS------------------------//
-void	move_ra(t_stack **stack, int cost_a);
-void	move_rb(t_stack **stack, int cost_b);
-void	move_rra(t_stack **stack, int cost_a);
-void	move_rrb(t_stack **stack, int cost_b);
-void	move_rr(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
-void	move_rrr(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
+void	move_ra(t_stack **stack, int *cost_a);
+void	move_rb(t_stack **stack, int *cost_b);
+void	move_rra(t_stack **stack, int *cost_a);
+void	move_rrb(t_stack **stack, int *cost_b);
+void	move_rr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
+void	move_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
 
 #endif

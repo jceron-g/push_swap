@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 09:39:29 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 13:22:46 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:31:11 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	loop_moves(t_stack **stack_a, t_stack **stack_b, t_stack *lowest_cost)
 	if (cost_a > 0 && cost_b > 0)
 		move_rr(stack_a, stack_b, &cost_a, &cost_b);
 	else if (cost_a < 0 && cost_b < 0)
-		move_rrr(stack_a, stack_b, cost_a, cost_b);
+		move_rrr(stack_a, stack_b, &cost_a, &cost_b);
 	while (cost_a != 0 || cost_b != 0)
 	{
 		move_ra(stack_a, &cost_a);
