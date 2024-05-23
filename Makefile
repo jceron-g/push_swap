@@ -6,13 +6,13 @@
 #    By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:34:28 by jceron-g          #+#    #+#              #
-#    Updated: 2024/05/23 11:37:29 by jceron-g         ###   ########.fr        #
+#    Updated: 2024/05/23 15:48:12 by jceron-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 USER = jceron-g
-CC = gcc -g
+CC = clang
 CFLAGS = -Wextra -Wall -Werror 
 LIBFT = lib/libft
 SRC_DIR = src/

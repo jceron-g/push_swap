@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 10:27:39 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 17:02:10 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,39 +18,34 @@ void	check_limits(long number)
 		print_error();
 }
 
-int	put_abs(int number)
-{
-	if (number < 0)
-		number = number * -1;
-	return (number);
-}
-
 int	total_cost(int a, int b)
 {
-	int	total_cost;
+	int	cost;
 
-	if ((a > 0 && b > 0) || (a < 0 && b < 0))
-	{
-		if (a > b)
-			total_cost = put_abs(a);
-		else
-			total_cost = put_abs(b);
-	}
+	cost = 0;
+	if (a == 0 && b == 0)
+		return (0);
+	if (a < 0)
+		cost = a * -1;
 	else
-		total_cost = put_abs(a) + put_abs(b);
-	return (total_cost);
+		cost = a;
+	if (b < 0)
+		cost = cost + (b * -1);
+	else
+		cost = cost + b;
+	return (cost);
 }
 
-int	check_dup(int *numbers, int len)
+int	check_dup(int *numbers, int cost)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < len)
+	while (i < cost)
 	{
 		j = i + 1;
-		while (j < len)
+		while (j < cost)
 		{
 			if (numbers[i] == numbers[j])
 				return (0);

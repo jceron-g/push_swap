@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 13:32:58 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 17:03:33 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int		check_dup(int *numbers, int len);
 void	set_stack_up(char **str);
 long	ft_atol(char *str);
 void	free_matrix(char **matrix);
-int		ft_abs(int a, int b);
 // -----------------STACK--------------------//
 t_stack	*make_stack(int *numbers, int len);
 t_stack	*new_stack(int content);
@@ -73,10 +72,9 @@ void	sort_and_init(t_stack **stack_a, t_stack **stack_b);
 void	loop_moves(t_stack **stack_a, t_stack **stack_b, t_stack *lowest_cost);
 //-------------------COSTS------------------------//
 void	set_costs(t_stack **stack_a, t_stack **stack_b);
-int		put_abs(int number);
 int		total_cost(int a, int b);
 void	put_total_cost(t_stack **stack);
-t_stack	*smallest_cost(t_stack **stack);
+void	smallest_cost(t_stack **stack_a, t_stack **stack_b);
 //-------------------MOVE_COSTS------------------------//
 void	move_ra(t_stack **stack, int *cost_a);
 void	move_rb(t_stack **stack, int *cost_b);

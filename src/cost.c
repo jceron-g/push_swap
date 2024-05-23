@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 12:58:46 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 10:43:11 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/23 16:09:28 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,25 @@ void	put_total_cost(t_stack **stack)
 	}
 }
 
-t_stack	*smallest_cost(t_stack **stack)
+void	smallest_cost(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*aux;
-	t_stack	*smallest;
+	t_stack	*lowest_cost_node;
+	int		low_cost;
+	int		cost;
 
-	aux = *stack;
-	smallest = *stack;
+	aux = *stack_b;
+	low_cost = -1;
+	cost = 0;
 	while (aux)
 	{
-		if (smallest->total_cost > aux->total_cost)
-			smallest = aux;
+		cost = total_cost(aux->cost_a, aux->cost_b);
+		if (low_cost == -1 || cost < low_cost)
+		{
+			low_cost = cost;
+			lowest_cost_node = aux;
+		}
 		aux = aux->next;
 	}
-	return (smallest);
+	loop_moves(stack_a, stack_b, lowest_cost_node);
 }
