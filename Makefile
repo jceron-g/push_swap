@@ -6,13 +6,13 @@
 #    By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:34:28 by jceron-g          #+#    #+#              #
-#    Updated: 2024/05/23 18:06:29 by jceron-g         ###   ########.fr        #
+#    Updated: 2024/05/24 16:04:05 by jceron-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 USER = jceron-g
-CC = clang -g
+CC = gcc -g
 CFLAGS = -Wextra -Wall -Werror 
 LIBFT = lib/libft
 SRC_DIR = src/
@@ -30,7 +30,7 @@ BLUE      = \033[34;1m
 CYAN      = \033[37;1m
 RED		  = \033[31;1m
 
-SRC_FILES = array free main move_costs push reverse_rot rotate sort stack swap tools_sort tools_stack tools cost 
+SRC_FILES = free main move_costs push reverse_rot rotate set_stack_up sort swap tools_sort tools_stack tools cost 
 SRC_FILES_BONUS = 
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 10:11:27 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 15:48:16 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	free_stack(t_stack **lst);
 void	create_stack(int *array, int len);
 int		stack_size(t_stack *stack);
 void	print_stack(t_stack *stack, char *str);
+void	check_stack_prop(t_stack **stack);
 // -----------------MOVES--------------------//
 void	push(t_stack **src, t_stack **dest);
 void	pa(t_stack **stack_a, t_stack **stack_b);
@@ -82,6 +83,6 @@ void	move_rb(t_stack **stack, int *cost_b);
 void	move_rra(t_stack **stack, int *cost_a);
 void	move_rrb(t_stack **stack, int *cost_b);
 void	move_rr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
-void	move_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
+void	mov_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
 
 #endif
