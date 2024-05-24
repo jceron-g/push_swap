@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 15:48:16 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 16:14:54 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		check_dup(int *numbers, int len);
 void	set_stack_up(char **str);
 long	ft_atol(char *str);
 void	free_matrix(char **matrix);
+int		is_spaces(char	*str);
 // -----------------STACK--------------------//
 t_stack	*make_stack(int *numbers, int len);
 t_stack	*new_stack(int content);

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 17:02:10 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 16:30:33 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,19 @@ int	check_dup(int *numbers, int cost)
 		i++;
 	}
 	return (1);
+}
+
+int	is_spaces(char	*str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] == ' ')
+		i++;
+	if (str[i] == '\0')
+		return (1);
+	else
+		return (0);
 }
 
 long	ft_atol(char *str)
