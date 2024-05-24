@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 18:26:36 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 13:21:24 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,15 @@ void	set_stack_up(char **str)
 void	create_stack(int *array, int len)
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b = NULL;
+	t_stack	*stack_b;
 
+	stack_b = NULL;
 	stack_a = make_stack(array, len);
+	if (is_sorted(stack_a) == 1)
+	{
+		free(stack_a);
+		return ;
+	}
 	assign_index(stack_a);
 	send_b(&stack_a, &stack_b);
 	free_stack(&stack_a);

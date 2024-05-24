@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:41:34 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 13:32:41 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 12:52:06 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,20 @@ void	rotate(t_stack **stack)
 void	ra(t_stack **stack_a)
 {
 	rotate(stack_a);
-	ft_putstr_fd("ra\n", 1);
+	ft_printf("ra\n");
 }
 
 void	rb(t_stack **stack_b)
 {
 	rotate(stack_b);
-	ft_putstr_fd("rb\n", 1);
+	ft_printf("rb\n");
 }
 
 void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	ft_putstr_fd("rr\n", 1);
+	ft_printf("rr\n");
 }
 
 void	move_rr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:16:04 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 15:03:21 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 12:51:51 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	move_rb(t_stack **stack, int *cost_b)
 {
 	while (*cost_b > 0)
 	{
-		ra(stack);
+		rb(stack);
 		(*cost_b)--;
 	}
 }

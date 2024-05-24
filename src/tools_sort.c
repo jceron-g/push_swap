@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/23 18:34:49 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/24 13:00:58 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,41 +101,26 @@ void	assign_target_pos(t_stack **stack_a, t_stack **stack_b)
 	}
 }
 
-void	sort_and_init(t_stack **stack_a, t_stack **stack_b)
+void	lowest_to_top(int check, t_stack **stack)
 {
-	int	check;
-	int i;
+	int	i;
 
 	i = 0;
-	while (*stack_b)
-	{
-		assign_pos(*stack_a);
-		assign_pos(*stack_b);
-		assign_target_pos(stack_a, stack_b);
-		set_costs(stack_a, stack_b);
-		put_total_cost(stack_b);
-		smallest_cost(stack_a, stack_b);
-	}
-	assign_pos(*stack_a);
-	check = find_smallest(stack_a);
-	//printf("%d\n", check);
-	if (check <= stack_size(*stack_a) / 2)
+	if (check <= stack_size(*stack) / 2)
 	{
 		while (i < check)
 		{
-			ra(stack_a);
+			ra(stack);
 			i++;
 		}
 	}	
 	else
 	{
 		i = check;
-		while (i < stack_size(*stack_a))
+		while (i < stack_size(*stack))
 		{
-			rra(stack_a);
+			rra(stack);
 			i++;
 		}
 	}
-	print_stack(*stack_a, "A");
 }
-
