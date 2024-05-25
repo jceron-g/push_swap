@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 16:30:33 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:32:02 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	check_limits(long number)
 {

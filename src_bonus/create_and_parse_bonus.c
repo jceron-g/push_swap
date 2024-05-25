@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_and_parse.c                                 :+:      :+:    :+:   */
+/*   create_and_parse_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 17:06:58 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:35:03 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 void	set_stack_up(char **str)
 {
@@ -55,9 +55,7 @@ t_stack	*make_stack(int *numbers, int len)
 
 void	create_stack(int *array, int len)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stack	*stack_a = NULL;
 
-	stack_b = NULL;
 	stack_a = make_stack(array, len);
 }

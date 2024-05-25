@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:18:20 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 13:00:58 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:31:53 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	assign_index(t_stack *stack)
 {

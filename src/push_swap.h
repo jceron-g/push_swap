@@ -6,14 +6,14 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 10:04:10 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:30:14 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "lib/libft/libft.h"
+# include "../lib/libft/libft.h"
 
 typedef struct s_stack
 {

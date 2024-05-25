@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:16:04 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 12:51:51 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:30:47 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	move_ra(t_stack **stack, int *cost_a)
 {

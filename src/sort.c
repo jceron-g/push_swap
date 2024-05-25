@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 09:39:29 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 16:35:34 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:31:42 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	sort_three(t_stack **stack)
 {

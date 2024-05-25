@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 14:32:13 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 10:03:14 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:30:36 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	free_matrix(char **matrix)
 {

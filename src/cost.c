@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 12:58:46 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 12:59:52 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:30:32 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	set_costs(t_stack **stack_a, t_stack **stack_b)
 {

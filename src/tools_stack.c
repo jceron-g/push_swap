@@ -6,11 +6,11 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:50 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/24 16:35:15 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:31:57 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 t_stack	*new_stack(int number)
 {
