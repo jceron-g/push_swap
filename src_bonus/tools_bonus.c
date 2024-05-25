@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 11:33:55 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:46:41 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,34 +18,16 @@ void	check_limits(long number)
 		print_error();
 }
 
-int	total_cost(int a, int b)
-{
-	int	cost;
-
-	cost = 0;
-	if (a == 0 && b == 0)
-		return (0);
-	if (a < 0)
-		cost = a * -1;
-	else
-		cost = a;
-	if (b < 0)
-		cost = cost + (b * -1);
-	else
-		cost = cost + b;
-	return (cost);
-}
-
-int	check_dup(int *numbers, int cost)
+int	check_dup(int *numbers, int len)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < cost)
+	while (i < len)
 	{
 		j = i + 1;
-		while (j < cost)
+		while (j < len)
 		{
 			if (numbers[i] == numbers[j])
 				return (0);

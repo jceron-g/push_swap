@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 11:35:03 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:38:10 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_stack	*make_stack(int *numbers, int len)
 
 void	create_stack(int *array, int len)
 {
-	t_stack	*stack_a = NULL;
+	t_stack	*stack_a;
 
 	stack_a = make_stack(array, len);
 }

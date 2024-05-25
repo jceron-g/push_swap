@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 09:51:21 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 11:33:40 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/25 11:43:18 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,3 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
 	ft_printf("rrr\n");
 }
 
-void	mov_rrr(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)
-{
-	while (*cost_a < 0 && *cost_b < 0)
-	{
-		rrr(stack_a, stack_b);
-		(*cost_a)++;
-		(*cost_b)++;
-	}
-}
