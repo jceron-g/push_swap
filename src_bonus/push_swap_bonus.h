@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:02:14 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 12:01:39 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/27 11:52:52 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ typedef struct s_stack
 }					t_stack;
 
 /*--------------CREATE AND PARSE----------------*/
-
 void	set_stack_up(char **str);
 t_stack	*make_stack(int *numbers, int len);
 void	create_stack(int *array, int len);
+void	input_checker(char *str, t_stack **stack_a, t_stack **stack_b);
+void	check_moves(t_stack **stack_a);
 /*-------------------MOVES-----------------------*/
 void	push(t_stack **src, t_stack **dest);
 void	pa(t_stack **stack_a, t_stack **stack_b);
@@ -48,6 +49,10 @@ void	swap(t_stack **stack);
 void	sa(t_stack **stack_a);
 void	sb(t_stack **stack_b);
 void	ss(t_stack **stack_a, t_stack **stack_b);
+void	swap_bonus(t_stack **stack_a, t_stack **stack_b, char *str);
+void	rotate_bonus(t_stack **stack_a, t_stack **stack_b, char *str);
+void	rev_rot_bonus(t_stack **stack_a, t_stack **stack_b, char *str);
+void	push_bonus(t_stack **stack_a, t_stack **stack_b, char *str);
 /*-------------------TOOLS------------------------*/
 void	check_limits(long number);
 int		check_dup(int *numbers, int len);
@@ -56,6 +61,7 @@ long	ft_atol(char *str);
 void	free_matrix(char **matrix);
 void	free_matrix_error(char **matrix);
 void	free_stack(t_stack **lst);
+void	free_stack_error(t_stack **stack_a, t_stack **stack_b);
 void	print_error(void);
 /*-----------------TOOLS STACK---------------------*/
 t_stack	*new_stack(int number);

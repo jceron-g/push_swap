@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:36:19 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 11:33:48 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/27 13:56:46 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,25 @@ void	swap(t_stack **stack)
 void	sa(t_stack **stack_a)
 {
 	swap(stack_a);
-	ft_printf("sa\n");
 }
 
 void	sb(t_stack **stack_b)
 {
 	swap(stack_b);
-	ft_printf("sb\n");
 }
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	ft_printf("ss\n");
+}
+
+void	swap_bonus(t_stack **stack_a, t_stack **stack_b, char *str)
+{
+	if (ft_strncmp(str, "sa", 2) == 0)
+		sa(stack_a);
+	else if (ft_strncmp(str, "sb", 2) == 0)
+		sb(stack_b);
+	else if (ft_strncmp(str, "ss", 2) == 0)
+		ss(stack_a, stack_b);
 }

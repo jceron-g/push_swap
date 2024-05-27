@@ -6,11 +6,12 @@
 #    By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:34:28 by jceron-g          #+#    #+#              #
-#    Updated: 2024/05/25 11:49:25 by jceron-g         ###   ########.fr        #
+#    Updated: 2024/05/27 13:54:49 by jceron-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+NAME_B = checker
 USER = jceron-g
 CC = gcc -g
 CFLAGS = -Wextra -Wall -Werror 
@@ -31,7 +32,7 @@ CYAN      = \033[37;1m
 RED		  = \033[31;1m
 
 SRC_FILES = free main move_costs push reverse_rot rotate set_stack_up sort swap tools_sort tools_stack tools cost 
-SRC_FILES_BONUS = create_and_parse_bonus push_bonus reverse_rot_bonus rotate_bonus swap_bonus tools_bonus tools_stack_bonus free_bonus 
+SRC_FILES_BONUS = create_and_parse_bonus main_bonus push_bonus reverse_rot_bonus rotate_bonus swap_bonus tools_bonus tools_stack_bonus free_bonus 
 
 SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -57,7 +58,7 @@ $(OBJF):
 			
 bonus:		$(OBJ_BONUS)
 			@make all -C $(LIBFT)
-			@$(CC) $(CFLAGS) $(OBJ_BONUS) -L$(LIBFT) -lft -o $(NAME)
+			@$(CC) $(CFLAGS) $(OBJ_BONUS) -L$(LIBFT) -lft -o $(NAME_B)
 			@echo "$(MAGENTA)Bonus compiled!$(RESET)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR_BONUS)%.c | $(OBJF)
@@ -73,6 +74,7 @@ clean:
 fclean:
 			@rm -rf $(OBJ_DIR)
 			@rm -rf $(NAME)
+			@rm -rf $(NAME_B)
 			@rm -rf $(OBJ_BONUS)
 			@make fclean -C $(LIBFT)
 			@echo "$(YELLOW)Cleaning libraries.$(RESET)"

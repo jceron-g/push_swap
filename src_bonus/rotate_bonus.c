@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:41:34 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 11:43:10 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/27 13:56:32 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,25 @@ void	rotate(t_stack **stack)
 void	ra(t_stack **stack_a)
 {
 	rotate(stack_a);
-	ft_printf("ra\n");
 }
 
 void	rb(t_stack **stack_b)
 {
 	rotate(stack_b);
-	ft_printf("rb\n");
 }
 
 void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	ft_printf("rr\n");
 }
 
+void	rotate_bonus(t_stack **stack_a, t_stack **stack_b, char *str)
+{
+	if (ft_strncmp(str, "ra", 2) == 0)
+		ra(stack_a);
+	else if (ft_strncmp(str, "rb", 2) == 0)
+		rb(stack_b);
+	else if (ft_strncmp(str, "rr", 2) == 0)
+		rr(stack_a, stack_b);
+}
