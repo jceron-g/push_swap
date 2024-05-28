@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/28 10:21:42 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:03:25 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ int	is_spaces(char	*str)
 	else
 		return (1);
 }
-
 
 long	ft_atol(char *str)
 {
