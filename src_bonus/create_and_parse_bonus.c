@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/27 14:00:48 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/28 09:50:53 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ void	check_moves(t_stack **stack_a)
 		free(line);
 	}
 	if (is_sorted(*stack_a) == 1 && stack_size(stack_b) == 0)
+		write(1, "OK\n", 3);
+	else if (stack_size(*stack_a) == 1 && stack_size(stack_b) == 0)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
