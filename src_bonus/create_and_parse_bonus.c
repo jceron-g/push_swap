@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 15:03:41 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/28 09:50:53 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/28 10:54:17 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	set_stack_up(char **str)
 	if (check_dup(number, len) == 0)
 		free_matrix_error(new_matrix);
 	create_stack(number, len);
+	free(number);
 	free_matrix(new_matrix);
 }
 
@@ -111,4 +112,5 @@ void	check_moves(t_stack **stack_a)
 	else
 		write(1, "KO\n", 3);
 	free_stack(stack_a);
+	free_stack(&stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 12:51:53 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/25 11:46:41 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/28 10:21:42 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,22 @@ int	check_dup(int *numbers, int len)
 int	is_spaces(char	*str)
 {
 	int	i;
+	int	check;
 
 	i = 0;
-	while (str[i] == ' ')
+	check = 0;
+	while (str[i])
+	{
+		if (str[i] == ' ')
+			check++;
 		i++;
-	if (str[i] == '\0')
-		return (1);
-	else
+	}
+	if (check == i)
 		return (0);
+	else
+		return (1);
 }
+
 
 long	ft_atol(char *str)
 {

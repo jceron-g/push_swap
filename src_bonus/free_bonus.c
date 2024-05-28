@@ -6,7 +6,7 @@
 /*   By: jceron-g <jceron-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 14:32:13 by jceron-g          #+#    #+#             */
-/*   Updated: 2024/05/27 14:04:30 by jceron-g         ###   ########.fr       */
+/*   Updated: 2024/05/28 10:52:04 by jceron-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,5 @@ void	free_stack_error(t_stack **stack_a, t_stack **stack_b)
 	if (stack_b || *stack_b)
 		free_stack(stack_b);
 	print_error();
-	exit(1);
 }
 
